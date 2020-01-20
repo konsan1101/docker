@@ -105,6 +105,7 @@ venv.bak/
 
 .vscode
 temp/
+*.exe
 *key.py
 *key.json
 *key.txt
