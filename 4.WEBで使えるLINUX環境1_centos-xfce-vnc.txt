@@ -1,0 +1,32 @@
+
+
+
+ÅyDockerÅz
+
+docker pull consol/centos-xfce-vnc
+docker run -d -p 5901:5901 -p 6901:6901 consol/centos-xfce-vnc
+
+vnc://localhost:5901
+Ç‹ÇΩÇÕ
+http://localhost:6901/vnc.html
+
+ÉpÉXÉèÅ[ÉhÇÕ vncpassword Ç≈Ç∑ÅB
+
+
+
+Åyä¬ã´ï€ë∂Åz
+
+C:\Users\kondou>docker ps -a
+CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS                      PORTS               NAMES
+f7c55fadc64b        consol/centos-xfce-vnc   "/dockerstartup/vnc_Åc"   9 minutes ago       Exited (0) 16 seconds ago                       focused_borg
+
+docker commit f7c55fadc64b consol/centos-xfce-vnc:kondou
+
+
+
+Åyä¬ã´çƒäJÅz
+
+docker run -d -p 5901:5901 -p 6901:6901 consol/centos-xfce-vnc:kondou
+
+
+

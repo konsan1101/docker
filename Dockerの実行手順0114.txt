@@ -1,0 +1,48 @@
+REM Dockerの実行手順
+
+
+
+ECHO ダウンロード
+
+docker pull mcr.microsoft.com/windows/nanoserver:1903
+docker pull python:latest
+
+
+
+ECHO 一覧
+
+docker images
+
+> REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
+> microsoft/nanoserver   latest              105d76d0f40e        4 days ago          652 MB
+
+
+
+ECHO 実行テスト
+
+docker run -it mcr.microsoft.com/windows/nanoserver:1903 cmd.exe
+
+echo "Hello World!" > Hello.txt
+exit
+
+docker run --rm python:latest pip list
+
+
+
+ECHO テスト一覧と名前を付けて保存
+
+docker ps
+
+> CONTAINER ID        IMAGE                                       COMMAND             CREATED             STATUS              PORTS               NAMES
+> 7004db9612b1        mcr.microsoft.com/windows/nanoserver:1903   "cmd.exe"           7 minutes ago       Up 4 minutes                            dreamy_hawking
+
+docker commit 7004db9612b1  testnanoserver:1903
+
+
+
+ECHO 実行テスト2
+
+docker run -it testnanoserver:1903 cmd.exe
+
+
+

@@ -1,0 +1,17 @@
+
+docker pull python:3.7.5
+
+rem docker run -v /d/ws:/data/workspace --rm -it python:3.7.5
+rem ↑VSで起動、pip 群インストール
+
+C:\Users\kondou>docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+b91f04161994        python:3.7.5        "python3"           20 minutes ago      Up 20 minutes                           reverent_robinson
+
+rem docker stop b91f04161994
+
+docker commit b91f04161994 python:aml
+
+
+
+docker run -v /c:/mnt/c --rm -it python:aml /bin/bash
