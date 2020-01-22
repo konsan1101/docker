@@ -5,7 +5,7 @@ https://github.com/fcwu/docker-ubuntu-vnc-desktop
 ÅyDockerÅz
 
 docker pull dorowu/ubuntu-desktop-lxde-vnc
-docker run -p 6080:80 -p 5900:5900 -v /dev/shm:/dev/shm dorowu/ubuntu-desktop-lxde-vnc
+docker run -p 6080:80 -p 5980:5900 -e VNC_PASSWORD=password -v /dev/shm:/dev/shm dorowu/ubuntu-desktop-lxde-vnc
 
 http://localhost:6080/
 
